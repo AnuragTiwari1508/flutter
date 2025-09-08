@@ -30,6 +30,7 @@ void main() {
     final ThemeData newTheme = Theme.of(newContext);
     
     // Verify that the theme actually changed to high contrast version
+    // This proves that MediaQuery override affects MaterialApp theme selection
     // The high contrast theme should have different color scheme due to contrastLevel: 1.0
     expect(newTheme.colorScheme.primary, isNot(equals(initialTheme.colorScheme.primary)));
     

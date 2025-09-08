@@ -20,8 +20,8 @@ class _HighContrastOverrideExampleAppState extends State<HighContrastOverrideExa
 
   @override
   Widget build(BuildContext context) {
-    // To affect theme selection, MediaQuery must wrap the MaterialApp,
-    // not be placed in the builder property
+    // IMPORTANT: To affect theme selection, MediaQuery must wrap the MaterialApp,
+    // not be placed in the builder property. This ensures proper theme selection.
     return MediaQuery(
       data: MediaQueryData.fromView(View.of(context)).copyWith(
         highContrast: _forceHighContrast,
